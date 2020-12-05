@@ -10,6 +10,7 @@ public class Balloon {
     public Balloon() {
         this.remembrance = "Шар разбился в " + Location.GREENTOWN.getLocation();
         System.out.println(remembrance);
+
     }
 
 
