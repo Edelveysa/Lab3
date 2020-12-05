@@ -1,11 +1,12 @@
 package kids;
 
 import enums.Location;
+import interfaces.AbleToUpdate;
 
 import java.util.Arrays;
 import java.util.Objects;
 
-public class Citizen extends Kid {
+public class Citizen extends Kid implements AbleToUpdate {
 
     public Citizen() {
         super("Жители Змеевки", Location.ZMEEVKA);
@@ -13,6 +14,7 @@ public class Citizen extends Kid {
     public Citizen(String name, Location location){
         super(name, location);
     }
+
 
     @Override
     public boolean equals(Object o) {
@@ -35,4 +37,6 @@ public class Citizen extends Kid {
                 ", memory=" + Arrays.toString(getAllMemory()) +
                 '}';
     }
+
+
 }
