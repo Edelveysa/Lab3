@@ -1,2 +1,2 @@
 # Диаграмма классов
-![alt text](diag.png)
+![alt text](diagram.png)
