@@ -15,7 +15,7 @@ public class Mechanic extends Kid implements AbleToFind {
 
     @Override
     public void find() {
-        System.out.println(getName() + " в поисках отвертки");
+        System.out.println(getName() + " в поисках инструмента");
         findResult();
     }
     void findResult(){
@@ -29,7 +29,8 @@ public class Mechanic extends Kid implements AbleToFind {
         if (o == null || getClass() != o.getClass()) return false;
         Mechanic mechanic = (Mechanic) o;
         return getName().equals(mechanic.getName()) &&
-                getLocation() == mechanic.getLocation();    }
+                getLocation() == mechanic.getLocation();    
+    }
 
     @Override
     public String toString() {
