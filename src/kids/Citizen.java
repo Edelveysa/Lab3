@@ -1,12 +1,10 @@
 package kids;
 
 import enums.Location;
-import interfaces.AbleToUpdate;
-
 import java.util.Arrays;
 import java.util.Objects;
 
-public class Citizen extends Kid implements AbleToUpdate {
+public class Citizen extends Kid{
 
     public Citizen() {
         super("Жители Змеевки", Location.ZMEEVKA);
