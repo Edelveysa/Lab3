@@ -1,8 +1,8 @@
 package kids;
 
 import enums.Location;
+import events.EventLibrary;
 import interfaces.AbleToFind;
-
 import java.util.Arrays;
 import java.util.Objects;
 
@@ -28,28 +28,21 @@ public final class Znayka extends Kid implements AbleToFind {
         System.out.println(temp == 3 ? "Поиски закончились успехом!" : "...мы их не нашли...");
     }
 
-    public void find(Citizen citizen, String[] memory){
+    public void find(Citizen citizen, EventLibrary eventLibrary){
         find();
         boolean[] memoryFind = new boolean[3];
-        for(int i = 0; i<memory.length; i++){
-            memoryFind[i] = hasRemembrance(citizen.getAllMemory(), memory[i]);
+        int j = 0;
+        for (int i = 0; i<citizen.getAllMemory().length; i++){
+            if(citizen.getAllMemory()[i] != null && eventLibrary.checkInEvents(citizen.getAllMemory()[i])){
+                memoryFind[j] = true;
+                j++;
+            }
         }
+
+
         findResult(memoryFind);
     }
 
-    boolean hasRemembrance(String[] args, String s) {
-        boolean tmp = false;
-        for (int i = 0; i < args.length; i++) {
-            if (args[i] == s) {
-                 tmp = true;
-                 break;
-            } else {
-                 tmp = false;
-            }
-
-        }
-        return tmp;
-    }
 
 
     @Override
