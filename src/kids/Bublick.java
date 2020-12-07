@@ -45,7 +45,9 @@ public final class Bublick extends Citizen{
     @Override
     public String toString() {
         return "Bublick{" +
-                "remembrance='" + remembrance + '\'' +
-                '}';
+                "name='" + getName() + '\'' +
+                ", location=" + getLocation() +
+                ", memory=" + Arrays.toString(getAllMemory()) +
+                '}';;
     }
 }
