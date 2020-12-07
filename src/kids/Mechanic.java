@@ -3,7 +3,6 @@ package kids;
 import enums.Location;
 import interfaces.AbleToFind;
 import story.Story;
-
 import java.util.Arrays;
 import java.util.Objects;
 
