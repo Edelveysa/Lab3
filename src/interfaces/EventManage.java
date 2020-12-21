@@ -1,7 +1,5 @@
 package interfaces;
 
-import kids.Kid;
-
 public interface EventManage {
     int MEMORY_SIZE = 10;
 
